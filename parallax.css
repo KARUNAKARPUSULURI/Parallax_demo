@@ -1,0 +1,102 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    line-height: 1.8em;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: transparent;
+    color: #333;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.parallax {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg1 { background-image: url('https://images.unsplash.com/photo-1723844944367-9332e405fd6c?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); }
+.bg2 { background-image: url('https://images.unsplash.com/photo-1615266895858-c243b139d5b9?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); }
+.bg3 { background-image: url('https://images.unsplash.com/photo-1615266895738-11f1371cd7e5?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); }
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.content-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.image-container {
+    flex: 1;
+    padding: 1em;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-container {
+    flex: 1;
+    padding: 1em;
+}
+
+.text-container h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.text-container p {
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .content-container, .content-container.reverse {
+        flex-direction: column;
+    }
+}
